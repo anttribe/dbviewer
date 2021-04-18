@@ -1,0 +1,39 @@
+@charset "utf-8";
+
+.main-container { }
+.main-container .sidebar {
+	width: 256px;
+	float: left;
+}
+.main-container .sidebar .sidebar-shortcuts {
+	padding: 6px 4px;
+}
+
+.nav-list li>a>.toolbar {
+/* 	display: inline-block; */
+/*     padding: 0 10px; */
+/*     float: right; */
+/*     position: relative; */
+/*     margin-right: 25px; */
+
+    display: block;
+    line-height: 14px;
+    text-shadow: none;
+    position: absolute;
+    right: 28px;
+    top: 12px;
+    padding: 0;
+    text-align: center;
+}
+
+.nav-list li>a>.toolbar i {
+	padding: 0 3px;
+}
+
+.main-container .main-content {
+	margin-left: 256px;
+}
+
+.sidebar~.footer .footer-inner {
+	left: 256px;
+}

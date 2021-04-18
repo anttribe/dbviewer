@@ -1,0 +1,19 @@
+@charset "utf-8";
+
+.light-login {
+	background: #dfe0e2;
+}
+
+.login-layout .widget-box {
+	margin-top: 30px;
+}
+
+.login-layout .widget-box .widget-header {
+	padding: 0;
+}
+
+.login-layout .widget-box .widget-main {
+	padding: 26px 20px;
+	background: #FFFFFF;
+	color: #656565;
+}

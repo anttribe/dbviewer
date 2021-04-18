@@ -1,0 +1,15 @@
+@charset "utf-8";
+
+html, body { }
+/*body { padding: 0; background: #FFFFFF; color: rgba(0,0,0,.75); font-size: 13px; font-family: 'Helvetica Neue',sans-serif,SimHei; }*/
+
+.img-thumbnail-30 { width: 30px; }
+.img-thumbnail-60 { width: 60px; }
+.img-thumbnail-180 { width: 180px; }
+
+.separator { border-bottom: 1px solid #e4e4e4; }
+
+/* table tr th { vertical-align: middle!important; padding: 4px 6px; border-top: none!important; text-align: center; } */
+/* table tr td { vertical-align: middle!important; padding: 4px 6px; border-top: none!important; } */
+
+.list-group { margin: 0;}

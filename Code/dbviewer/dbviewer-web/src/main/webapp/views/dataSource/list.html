@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" 
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts/aceadmin/layout}"
+      class="no-js" lang="en">
+    <head>
+        <title>数据源</title>
+    </head>
+    <body>
+        <div class="page-content" layout:fragment="page-content">
+            <!-- <div class="page-header"></div> -->
+            <div class="row">
+                <div class="col-xs-12 col-sm-12">
+                    <!-- PAGE CONTENT BEGINS -->
+                    <form class="form-inline mb10">
+                        <a id="action-add" href="javascript:;" class="btn btn-primary btn-sm"><i class="fa fa-plus-circle"></i> 添加数据源</a>
+                    </form>
+                    
+                    <div class="row">
+                        <th:block th:each="ds: ${DATALIST}">
+                            <div th:attr="data-id=${ds.id}" class="col-xs-3 col-sm-3 widget-container-col ui-sortable">
+                                <div class="widget-box">
+                                    <div class="widget-header widget-header-flat">
+                                        <h5 class="widget-title smaller lighter"><i class="ace-icon fa fa-th-large"></i><span th:text="${ds.alias}"></span></h5>
+                                        <div class="widget-toolbar">
+                                            <a href="javascript:;" title="添加数据库" class="action-add-db green"><i class="ace-icon fa fa-plus"></i></a>
+                                            <a href="javascript:;" title="编辑" class="action-edit grey"><i class="ace-icon fa fa-edit"></i></a>
+                                            <a href="javascript:;" title="删除" class="action-setTemplates red2"><i class="ace-icon fa fa-close"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="widget-body">
+                                        <div class="widget-main no-padding">
+                                            <div class="list-group">
+                                                <th:block th:each="db: ${ds.databases}">
+                                                    <a th:href="@{'/database/' + ${db.id}}" target="_blank" class="list-group-item"><i class="ace-icon fa fa-database"></i><span th:text="${db.name}" class="ml5"></span></a>
+                                                </th:block>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </th:block>
+                    </div>
+                    <!-- PAGE CONTENT ENDS -->
+                </div>
+            </div>
+        </div>
+        <th:block layout:fragment="page-javascript">
+            <script type="text/javascript" th:src="@{/static/js/dataSource/dataSource.js}"></script>
+            <script type="text/javascript" th:src="@{/static/js/database/database.js}"></script>
+            <script type="text/javascript" th:src="@{/static/js/dataSource/list.js}"></script>
+        </th:block>
+    </body>
+</html>

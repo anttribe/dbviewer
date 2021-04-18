@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" 
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts/aceadmin/layoutWithMainContent}"
+      class="no-js" lang="en">
+    <head>
+        <title></title>
+        <link rel="stylesheet" th:href="@{/static/css/dataSource/index.css}" />
+    </head>
+    <body>
+        <th:block layout:fragment="main-content">
+            <div id="ds-sidebar" class="sidebar responsive">
+		        <div class="sidebar-shortcuts">
+                    <div class="input-group input-icon">
+				        <input type="text" placeholder="搜索数据源 ..." class="" autocomplete="off">
+				        <div class="input-group-btn">
+                            <a id="action-add-ds" href="javascript:;" class="btn btn-sm btn-info ml5"><i class="ace-icon fa fa-plus"></i></a>
+                        </div>
+				        <i class="ace-icon fa fa-search"></i>
+				    </div>
+                </div>
+                <ul id="ds-list" class="nav nav-list">
+                </ul><!-- /.nav-list -->
+            </div>
+            <div class="main-content">
+			    <div class="page-content">
+			        <div class="row">
+			            <div class="col-xs-12 col-sm-12">
+			                <!-- PAGE CONTENT BEGINS -->
+			                <div class="ds-content-tabs hidden">
+			                    <ul class="nav nav-tabs"></ul>
+			                    <div class="tab-content"></div>
+			                </div>
+			                <!-- PAGE CONTENT ENDS -->
+			            </div>
+                       </div>
+			    </div><!-- /.main-content -->
+	        </div>
+        </th:block>
+        <th:block layout:fragment="page-javascript">
+            <script type="text/javascript" th:src="@{/static/js/dataSource/dataSource.js}"></script>
+            <script type="text/javascript" th:src="@{/static/js/dbSchema/dbSchema.js}"></script>
+            <script type="text/javascript" th:src="@{/static/js/dbTable/dbTable.js}"></script>
+            <script type="text/javascript" th:src="@{/static/js/dataSource/index.js}"></script>
+        </th:block>
+    </body>
+</html>

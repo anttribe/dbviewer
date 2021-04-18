@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" 
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts/aceadmin/layout-blank}"
+      class="no-js" lang="en">
+    <head>
+        <title>登录</title>
+        <link rel="stylesheet" th:href="@{/static/css/login.css}" />
+    </head>
+    <body class="login-layout light-login">
+        <div class="" layout:fragment="page-content">
+            <div class="login-container">
+		        <div class="position-relative">
+		            <div id="login-box" class="login-box visible widget-box widget-color-dark no-border">
+		                <div class="widget-header">
+		                    <div class="widget-title text-center">
+		                        <h3 class="mt20 mb20"><i class="ace-icon fa fa-leaf white"></i><span class=""> DbViewer</span></h3>
+		                    </div>
+		                </div>
+					    <div class="widget-body">
+						    <div class="widget-main">
+<!-- 						        <h4 class="header blue lighter bigger text-center"><i class="ace-icon fa fa-sign-in"></i> 登录</h4> -->
+							    <form class="">
+							        <div class="form-group">
+							            <span class="block input-icon input-icon-right">
+									        <input id="login-username-input" type="text" class="form-control" placeholder="登录名" />
+											<i class="ace-icon fa fa-user"></i>
+										</span>
+							        </div>
+							        <div class="form-group">
+							            <span class="block input-icon input-icon-right">
+									        <input id="login-password-input" type="password" class="form-control" placeholder="密码" />
+											<i class="ace-icon fa fa-lock"></i>
+										</span>
+							        </div>
+<!-- 							        <div class="clearfix"> -->
+<!-- 							            <label class="inline"> -->
+<!-- 										    <input type="checkbox" class="ace" /> -->
+<!-- 										    <span class="lbl"> 记住我</span> -->
+<!-- 									    </label> -->
+<!-- 									    <div class="pull-right"> -->
+<!-- 									        <a th:href="@{/forgotPassword}" class="text-muted">忘记密码？</a> -->
+<!-- 									    </div> -->
+<!-- 							        </div> -->
+							        <div class="clearfix">
+							            <a href="javascript:;" class="action-login btn btn-block btn-info">登录</a>
+							        </div>
+							        
+<!-- 							        <p class="mt20 text-center">需要注册？</p> -->
+<!-- 							        <a th:href="@{/register}" class="btn btn-block btn-white">现在就注册</a> -->
+							    </form>
+							</div>
+					    </div>
+					</div>
+					<div class="mt20 text-center">
+					    <span>©</span>
+					    <span>2016</span>
+					    <span>-</span>
+					    <span>2020</span>
+					    <br>
+					    <span>(Anttribe)anshenglimin@163.com</span>
+					</div>
+			    </div>
+			</div>
+        </div>
+        <th:block layout:fragment="page-javascript">
+            <script type="text/javascript" th:src="@{/static/js/authc/authc.js}"></script>
+            <script type="text/javascript" th:src="@{/static/js/authc/login.js}"></script>
+        </th:block>
+    </body>
+</html>
